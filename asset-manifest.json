@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/AccumulaTakeHomeTest/static/css/main.b4e7b695.css",
-    "main.js": "/AccumulaTakeHomeTest/static/js/main.35e9d735.js",
-    "static/js/787.59fd632c.chunk.js": "/AccumulaTakeHomeTest/static/js/787.59fd632c.chunk.js",
-    "index.html": "/AccumulaTakeHomeTest/index.html",
-    "main.b4e7b695.css.map": "/AccumulaTakeHomeTest/static/css/main.b4e7b695.css.map",
-    "main.35e9d735.js.map": "/AccumulaTakeHomeTest/static/js/main.35e9d735.js.map",
-    "787.59fd632c.chunk.js.map": "/AccumulaTakeHomeTest/static/js/787.59fd632c.chunk.js.map"
+    "main.css": "/AccumulaTakeHomeTest/products/static/css/main.b4e7b695.css",
+    "main.js": "/AccumulaTakeHomeTest/products/static/js/main.9da6f0d2.js",
+    "static/js/787.59fd632c.chunk.js": "/AccumulaTakeHomeTest/products/static/js/787.59fd632c.chunk.js",
+    "index.html": "/AccumulaTakeHomeTest/products/index.html",
+    "main.b4e7b695.css.map": "/AccumulaTakeHomeTest/products/static/css/main.b4e7b695.css.map",
+    "main.9da6f0d2.js.map": "/AccumulaTakeHomeTest/products/static/js/main.9da6f0d2.js.map",
+    "787.59fd632c.chunk.js.map": "/AccumulaTakeHomeTest/products/static/js/787.59fd632c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b4e7b695.css",
-    "static/js/main.35e9d735.js"
+    "static/js/main.9da6f0d2.js"
   ]
 }
