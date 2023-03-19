@@ -34,20 +34,19 @@ function isBankHoliday(date) {
     return "";
 }
 
-export function findDaysToShip(product) {
+export function findDaysToShip(product, date) {
     let maxDaysToShip = product.maxBusinessDaysToShip
 
-    const current = new Date();
     let days = 0;
 
     if (!product.shipOnWeekends) {
-        days = getFinalShipDate(current, maxDaysToShip);
+        days = getFinalShipDate(date, maxDaysToShip);
         console.log(`day: ${days}`);
         return days;
     }
     
     let approxShipDate = new Date();
-    approxShipDate = new Date(approxShipDate.setDate(current.getDate() + maxDaysToShip - 1));
+    approxShipDate = new Date(approxShipDate.setDate(date.getDate() + maxDaysToShip - 1));
 
     // const stringDate = `${current.getDate()}-${current.getMonth()+1}-${current.getFullYear()}`;
                 
