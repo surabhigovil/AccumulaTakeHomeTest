@@ -1,0 +1,36 @@
+
+.App {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  width: 600px;
+  height: 190px;
+  background-color: #5cbbf2;
+  padding: 35px 15px 5px;
+}
+.container:before,
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.container div {
+  float: left;
+  width: 180px;
+  height: 160px;
+}
+#box1 {
+  background-color: #000000;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+p {
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+}
+
+
