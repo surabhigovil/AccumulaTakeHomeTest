@@ -1,4 +1,4 @@
-function isBankHoliday(date) {
+function isHoliday(date) {
     
     // static holidays
     const isDate = (d, month, date) => {
@@ -34,43 +34,41 @@ function isBankHoliday(date) {
     return "";
 }
 
-export function findDaysToShip(product, date) {
-    let maxDaysToShip = product.maxBusinessDaysToShip
-
-    let days = 0;
-
-    if (!product.shipOnWeekends) {
-        days = getFinalShipDate(date, maxDaysToShip);
-        console.log(`day: ${days}`);
-        return days;
-    }
-    
-    let approxShipDate = new Date();
-    approxShipDate = new Date(approxShipDate.setDate(date.getDate() + maxDaysToShip - 1));
-
-    // const stringDate = `${current.getDate()}-${current.getMonth()+1}-${current.getFullYear()}`;
-                
-        
-    return approxShipDate;
-}
-
 function getFinalShipDate(d1, maxDaysToShip) {
-    let d2 = new Date(d1);
-    d2 = new Date(d2.setDate(d2.getUTCDate()));
-    let dayCount = 0;
-    let holidayCount = 0;
     
     while ( maxDaysToShip > 0) {
         var day = d1.getDay();
-        if(isBankHoliday(d1) || (day === 6 || day === 0)) {
-            ++holidayCount
-        } else {
-            dayCount++;
+        if(!(isHoliday(d1) || (day === 6 || day === 0))) {
             maxDaysToShip--;
         }
-        d1.setDate(d1.getUTCDate() + 1);
+
+        d1.setDate(d1.getDate() + 1);
     }
 
-    d2 = new Date(d2.setDate(d2.getUTCDate() + holidayCount + dayCount - 1));
-    return d2;
+    d1.setDate(d1.getDate() - 1); // Since we want to count the first date
+    return d1;
+}
+
+export function findDaysToShip(product, date) {
+    let maxDaysToShip = product.maxBusinessDaysToShip
+
+    const selectedDate = new Date(date);
+    selectedDate.setDate(selectedDate.getDate() + 1);
+
+    let approxShipDate = new Date();
+    
+    if (!product.shipOnWeekends) {
+        approxShipDate = getFinalShipDate(selectedDate, maxDaysToShip);
+    } else {
+        approxShipDate = new Date(approxShipDate.setDate(selectedDate.getDate() + maxDaysToShip - 1));
+    }
+    
+    return approxShipDate;
+}
+
+export function getLocalDate(date) {
+    var tzoffset = new Date(date).getTimezoneOffset() * 60000; //offset in milliseconds
+    var localISOTime = (new Date(date - tzoffset)).toISOString().slice(0, -1);
+  
+    return localISOTime;   
 }

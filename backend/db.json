@@ -5,7 +5,7 @@
         "productName": "non quis sint",
         "inventoryQuantity": 33,
         "shipOnWeekends": false,
-        "maxBusinessDaysToShip": 3
+        "maxBusinessDaysToShip": 6
         },
         {
         "productId": 1,

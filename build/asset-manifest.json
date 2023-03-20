@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/AccumulaTakeHomeTest/products/static/css/main.b4e7b695.css",
-    "main.js": "/AccumulaTakeHomeTest/products/static/js/main.9da6f0d2.js",
+    "main.js": "/AccumulaTakeHomeTest/products/static/js/main.bfabf349.js",
     "static/js/787.59fd632c.chunk.js": "/AccumulaTakeHomeTest/products/static/js/787.59fd632c.chunk.js",
     "index.html": "/AccumulaTakeHomeTest/products/index.html",
     "main.b4e7b695.css.map": "/AccumulaTakeHomeTest/products/static/css/main.b4e7b695.css.map",
-    "main.9da6f0d2.js.map": "/AccumulaTakeHomeTest/products/static/js/main.9da6f0d2.js.map",
+    "main.bfabf349.js.map": "/AccumulaTakeHomeTest/products/static/js/main.bfabf349.js.map",
     "787.59fd632c.chunk.js.map": "/AccumulaTakeHomeTest/products/static/js/787.59fd632c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b4e7b695.css",
-    "static/js/main.9da6f0d2.js"
+    "static/js/main.bfabf349.js"
   ]
 }
